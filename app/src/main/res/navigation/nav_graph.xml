@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentSplash">
+    <fragment
+        android:id="@+id/fragmentReservations"
+        android:name="com.kartik.grevocab.FragmentReservations"
+        tools:layout="@layout/fragment_reservations">
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSplash"
+        android:name="com.kartik.grevocab.FragmentSplash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_fragmentSplash_to_fragmentWordList"
+            app:destination="@id/fragmentReservations"
+            app:popUpTo="@id/fragmentSplash"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
