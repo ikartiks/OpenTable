@@ -28,24 +28,28 @@ class FragmentReservationViewModel(private val timeUtils: TimeUtils, private val
         return list
     }
 
-    var newReservation = Reservation()
+    private var newReservation = Reservation()
+    lateinit var selectedReservation: ReservationDisplay
 
     fun updateReservationPartySize(partySize: Long) {
         newReservation.partySize = partySize
     }
+
     fun updateReservationGuestDetailsAndProceed(guestDetails: GuestDetails) {
         newReservation.guestDetails = guestDetails
         updateAvailableTimeSlots(newReservation.time!!)
         addReservation()
     }
+
     fun updateReservationTime(time: LocalTime) {
         newReservation.time = time
     }
-    fun updateAvailableTimeSlots(time: LocalTime) {
+
+    private fun updateAvailableTimeSlots(time: LocalTime) {
         dataHolder.availableTimeSlots = timeUtils.removeTimeSlotsPostReservation(dataHolder.availableTimeSlots, time)
     }
 
-    fun addReservation() {
+    private fun addReservation() {
         dataHolder.addReservation(newReservation)
         newReservation = Reservation()
     }

@@ -9,10 +9,15 @@
     <string name="four">Four</string>
     <string name="five">Five</string>
     <string name="party_size_title">Select party size</string>
+    <string name="party_size">Party size:</string>
     <string name="time_title">Choose reservation time</string>
+    <string name="time">Time:</string>
+    <string name="visit_notes">Visit Notes:</string>
     <string name="name">Name</string>
     <string name="enter_name">Enter name - atleast 1 character</string>
     <string name="confirm">Confirm</string>
     <string name="notes">Guest notes</string>
     <string name="already_reserved">Unfortunately restaurant is reserved at this time</string>
+    <string name="booking_details_title">Booking details</string>
+    <string name="current_reservations">Current Reservations</string>
 </resources>

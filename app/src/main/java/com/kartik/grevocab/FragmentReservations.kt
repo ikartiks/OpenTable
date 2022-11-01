@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.kartik.grevocab.adapters.OnBindClickListener
 import com.kartik.grevocab.adapters.ReservationsAdapter
+import com.kartik.grevocab.adapters.display.ReservationDisplay
 import com.kartik.grevocab.base.FragmentBase
 import com.kartik.grevocab.databinding.FragmentReservationsBinding
 import com.kartik.grevocab.utility.LoaderState
@@ -29,10 +31,18 @@ class FragmentReservations : FragmentBase() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        toolbarTitle(resources.getString(R.string.app_name))
+        toolbarTitle(resources.getString(R.string.current_reservations))
         (activity as ActivityMain).setToolbarVisibility(View.VISIBLE)
 
-        val adapter = ReservationsAdapter()
+        val adapter = ReservationsAdapter(object : OnBindClickListener {
+            override fun onItemClick(view: View, position: Int, item: Any) {
+                val clickedItem = item as ReservationDisplay
+                clickedItem.reservation.time?.let {
+                    vm.selectedReservation = clickedItem
+                    findNavController().navigate(FragmentReservationsDirections.actionFragmentReservationsToFragmentReservationDetails())
+                }
+            }
+        })
         binding.recyclerView.adapter = adapter
 
         binding.create.setOnClickListener {

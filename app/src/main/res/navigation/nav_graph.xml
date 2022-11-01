@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_fragmentReservations_to_fragmentPartySize"
             app:destination="@id/fragmentPartySize" />
+        <action
+            android:id="@+id/action_fragmentReservations_to_fragmentReservationDetails"
+            app:destination="@id/fragmentReservationDetails" />
     </fragment>
     <fragment
         android:id="@+id/fragmentSplash"
@@ -49,4 +52,8 @@
             app:popUpToInclusive="true"
             app:popUpTo="@id/fragmentReservations"/>
     </fragment>
+    <fragment
+        android:id="@+id/fragmentReservationDetails"
+        android:name="com.kartik.grevocab.FragmentReservationDetails"
+        android:label="FragmentReservationDetails" />
 </navigation>
