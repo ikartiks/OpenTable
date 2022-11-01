@@ -1,17 +1,27 @@
 package com.kartik.grevocab.utility
 
+import com.kartik.grevocab.MockResProvider
+import io.mockk.every
+import io.mockk.mockk
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.threeten.bp.LocalTime
 
 internal class TimeUtilsTest {
 
-    val timeUtils = TimeUtils()
+    private val resProvider: MockResProvider = mockk()
+    private val timeUtils = TimeUtils(resProvider)
+
+    @BeforeEach
+    fun preTest() {
+        every { resProvider.getColor(any()) } returns 1
+    }
 
     @Test
     fun getFormattedTime() {
         val slots = timeUtils.getAllTimeSlotsFromStartTimeToEndTime()
-        val formattedTime = timeUtils.getFormattedTime(slots[0])
+        val formattedTime = timeUtils.getFormattedTime(slots[0].time)
         assertEquals(formattedTime, "03:00 pm")
     }
 
@@ -22,6 +32,8 @@ internal class TimeUtilsTest {
         val updatedSlotsTwo = timeUtils.removeTimeSlotsPostReservation(updatedSlots, LocalTime.of(15, 15))
         val updatedSlotsThree = timeUtils.removeTimeSlotsPostReservation(updatedSlotsTwo, LocalTime.of(20, 45))
         val updatedSlotsFour = timeUtils.removeTimeSlotsPostReservation(updatedSlotsThree, LocalTime.of(22, 0))
-        updatedSlotsFour.toString()
+        val availableSlots = updatedSlotsFour.filter { it.isAvailable }
+        assertEquals(availableSlots.size, 11)
+        assertEquals(availableSlots[0].friendlyTime, "05:15 pm")
     }
 }
