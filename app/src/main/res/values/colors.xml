@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--  theme colors -->
-    <color name="colorPrimary">#257A28</color>
-    <color name="colorPrimaryDark">#0D470F</color>
-    <color name="colorAccent">#8EBC8F</color>
+    <color name="colorPrimary">@color/red</color>
+    <color name="colorPrimaryDark">@color/red_darker</color>
+    <color name="colorAccent">@color/red_lighter</color>
+
+    <color name="red_darker">#450D10</color>
+    <color name="red">#DA3743</color>
+    <color name="red_lighter">#EEA0A5</color>
+
     <color name="primaryText">#212121</color>
     <color name="secondaryText">#727272</color>
     <color name="divider">#CC727272</color>
-    <color name="error">#E91616</color>
-    <color name="splashBGColor">#0D470F</color>
+    <color name="error">#da3743</color>
+    <color name="splashBGColor">@color/screen_bg</color>
 
     <color name="bgForCards">@color/white</color>
 

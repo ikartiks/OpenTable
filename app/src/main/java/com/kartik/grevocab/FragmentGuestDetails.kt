@@ -28,7 +28,7 @@ class FragmentGuestDetails : FragmentBase() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        toolbarTitle(getString(R.string.time_title))
+        toolbarTitle(getString(R.string.add_guest_details))
         binding.confirm.setOnClickListener {
             if (vm.validate()) {
                 reservationViewModel.updateReservationGuestDetailsAndProceed(GuestDetails(vm.name.get()!!, vm.notes.get() ?: ""))

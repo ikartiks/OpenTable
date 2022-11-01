@@ -43,6 +43,8 @@
         android:backgroundTint="@color/colorPrimary"
         android:layout_marginEnd="@dimen/dp10"
         android:layout_marginBottom="@dimen/dp10"
-        android:src="@android:drawable/ic_input_add"/>
+        android:src="@drawable/ic_plus"
+        app:tint="@android:color/white"
+        android:tint="@color/white"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
