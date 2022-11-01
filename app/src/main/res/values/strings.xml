@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!-- logical strings end -->
-
     <string name="app_name">Open Table</string>
     <string name="ok">Okay!</string>
     <string name="create_reservation">Create Reservation</string>
+    <string name="one">One</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+    <string name="four">Four</string>
+    <string name="five">Five</string>
+    <string name="party_size_title">Select party size</string>
+    <string name="time_title">Choose reservation time</string>
+    <string name="name">Name</string>
+    <string name="enter_name">Enter name - atleast 1 character</string>
+    <string name="confirm">Confirm</string>
+    <string name="notes">Guest notes</string>
+    <string name="already_reserved">Unfortunately restaurant is reserved at this time</string>
 </resources>

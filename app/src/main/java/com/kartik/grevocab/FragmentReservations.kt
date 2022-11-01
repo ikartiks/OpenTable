@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.kartik.grevocab.adapters.ReservationsAdapter
 import com.kartik.grevocab.base.FragmentBase
 import com.kartik.grevocab.databinding.FragmentReservationsBinding
@@ -35,6 +36,7 @@ class FragmentReservations : FragmentBase() {
         binding.recyclerView.adapter = adapter
 
         binding.create.setOnClickListener {
+            findNavController().navigate(FragmentReservationsDirections.actionFragmentReservationsToFragmentPartySize())
         }
 
         CoroutineScope(Dispatchers.Main).launch {

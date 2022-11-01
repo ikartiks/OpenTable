@@ -64,5 +64,35 @@
         <item name="arrowHeadLength">8dp</item>
     </style>
 
+    <style name="MyTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- Style attributes -->
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="counterTextAppearance">@style/HintText</item>
+
+        <!-- note any states(activated/normal/error) text color and line color remains same in material theming
+        https://medium.com/omisoft/textinputlayout-styling-8b36a5e0d73c
+        -->
+        <item name="colorPrimary">@color/colorAccent</item>  <!-- Activated color -->
+        <item name="colorOnSurface">@color/primaryText</item> <!-- Normal color -->
+        <item name="colorError">@color/error</item>        <!-- Error color -->
+
+        <item name="hintTextColor">@color/colorAccent</item>  <!-- Activated color -->
+        <item name="counterTextColor">@color/colorAccent</item> <!-- Normal color -->
+        <item name="errorTextColor">@color/error</item>        <!-- Error color -->
+
+        <item name="boxStrokeColor">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/primaryText</item>
+    </style>
+
+    <style name="ErrorText" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">@color/error</item>
+    </style>
+
+    <style name="HintText" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+
 
 </resources>

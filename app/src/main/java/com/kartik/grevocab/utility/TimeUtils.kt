@@ -1,9 +1,13 @@
 package com.kartik.grevocab.utility
 
+import com.kartik.grevocab.R
+import com.kartik.grevocab.adapters.display.TimeDisplay
+import com.kartik.grevocab.adapters.display.toDisplay
+import com.kartik.grevocab.base.ResProvider
 import org.threeten.bp.LocalTime
 import org.threeten.bp.format.DateTimeFormatter
 
-class TimeUtils {
+class TimeUtils(private val resProvider: ResProvider) {
 
     companion object {
         const val INTERVAL_IN_MIN = 15L
@@ -12,7 +16,7 @@ class TimeUtils {
         val END_TIME: LocalTime = LocalTime.of(22, 0, 0)
     }
 
-    fun getAllTimeSlotsFromStartTimeToEndTime(): List<LocalTime> {
+    fun getAllTimeSlotsFromStartTimeToEndTime(): List<TimeDisplay> {
         val timeSlots = mutableListOf<LocalTime>()
         var start = START_TIME
         timeSlots.add(start)
@@ -20,22 +24,23 @@ class TimeUtils {
             start = start.plusMinutes(INTERVAL_IN_MIN)
             timeSlots.add(start)
         }
-        return timeSlots
+        return timeSlots.map { it.toDisplay(this, resProvider) }
     }
 
     fun getFormattedTime(localTime: LocalTime, format: String = "hh:mm a"): String {
         return localTime.format(DateTimeFormatter.ofPattern(format))
     }
 
-    fun removeTimeSlotsPostReservation(slots: List<LocalTime>, reservationTime: LocalTime): List<LocalTime> {
+    fun removeTimeSlotsPostReservation(slots: List<TimeDisplay>, reservationTime: LocalTime): List<TimeDisplay> {
         val lastTime = reservationTime.plusMinutes(RESERVATION_LENGTH_IN_MIN)
         val preTime = reservationTime.minusMinutes(RESERVATION_LENGTH_IN_MIN)
-        val updatedSlots = mutableListOf<LocalTime>()
         for (slot in slots) {
-            if (!(slot.isAfter(preTime) && slot.isBefore(lastTime))) {
-                updatedSlots.add(slot)
+            val slotTime = slot.time
+            if ((slotTime.isAfter(preTime) && slotTime.isBefore(lastTime))) {
+                slot.isAvailable = false
+                slot.backgroundColor = resProvider.getColor(R.color.divider)
             }
         }
-        return updatedSlots
+        return slots
     }
 }

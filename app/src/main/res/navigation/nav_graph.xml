@@ -8,6 +8,9 @@
         android:id="@+id/fragmentReservations"
         android:name="com.kartik.grevocab.FragmentReservations"
         tools:layout="@layout/fragment_reservations">
+        <action
+            android:id="@+id/action_fragmentReservations_to_fragmentPartySize"
+            app:destination="@id/fragmentPartySize" />
     </fragment>
     <fragment
         android:id="@+id/fragmentSplash"
@@ -18,5 +21,32 @@
             app:destination="@id/fragmentReservations"
             app:popUpTo="@id/fragmentSplash"
             app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPartySize"
+        android:name="com.kartik.grevocab.FragmentPartySize"
+        android:label="fragment_party_size"
+        tools:layout="@layout/fragment_party_size" >
+        <action
+            android:id="@+id/action_fragmentPartySize_to_fragmentTime"
+            app:destination="@id/fragmentTime" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTime"
+        android:name="com.kartik.grevocab.FragmentTime"
+        android:label="FragmentTime" >
+        <action
+            android:id="@+id/action_fragmentTime_to_fragmentGuestDetails"
+            app:destination="@id/fragmentGuestDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGuestDetails"
+        android:name="com.kartik.grevocab.FragmentGuestDetails"
+        android:label="FragmentGuestDetails" >
+        <action
+            android:id="@+id/action_fragmentGuestDetails_to_fragmentReservations"
+            app:destination="@id/fragmentReservations"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentReservations"/>
     </fragment>
 </navigation>
