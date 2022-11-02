@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import com.kartik.grevocab.adapters.OnBindClickListener
 import com.kartik.grevocab.adapters.TimeAdapter
 import com.kartik.grevocab.adapters.display.TimeDisplay
@@ -45,6 +46,8 @@ class FragmentTime : FragmentBase() {
                 findNavController().navigate(FragmentTimeDirections.actionFragmentTimeToFragmentGuestDetails())
             }
         })
+        binding.recyclerView.addItemDecoration(DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL))
+
         binding.recyclerView.adapter = adapter
 
         CoroutineScope(Dispatchers.Main).launch {

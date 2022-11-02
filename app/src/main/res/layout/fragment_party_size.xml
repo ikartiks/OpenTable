@@ -11,8 +11,8 @@
             android:id="@+id/one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:padding="@dimen/dp5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:padding="@dimen/dp20"
             android:text="@string/one" />
 
         <View
@@ -24,8 +24,8 @@
             android:id="@+id/two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:padding="@dimen/dp5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:padding="@dimen/dp20"
             android:text="@string/two" />
 
         <View
@@ -37,8 +37,8 @@
             android:id="@+id/three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:padding="@dimen/dp5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:padding="@dimen/dp20"
             android:text="@string/three" />
 
         <View
@@ -50,8 +50,8 @@
             android:id="@+id/four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:padding="@dimen/dp5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:padding="@dimen/dp20"
             android:text="@string/four" />
 
         <View
@@ -63,8 +63,8 @@
             android:id="@+id/five"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:padding="@dimen/dp5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:padding="@dimen/dp20"
             android:text="@string/five" />
     </LinearLayout>
 </layout>

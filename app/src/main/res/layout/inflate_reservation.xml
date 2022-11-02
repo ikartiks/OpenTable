@@ -37,7 +37,6 @@
             android:layout_marginStart="@dimen/dp5"
             app:layout_constraintTop_toTopOf="parent"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="@color/secondaryText"
             android:text="@{rd.reservation.guestDetails.name}"
             tools:text="Michael lee" />
 
@@ -52,7 +51,6 @@
             app:layout_constraintStart_toEndOf="@id/party_size"
             android:layout_marginStart="@dimen/dp5"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="@color/secondaryText"
             android:text="@{rd.friendlyTime}"
             tools:text="03:45 pm" />
     </androidx.constraintlayout.widget.ConstraintLayout>
