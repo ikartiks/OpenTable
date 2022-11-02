@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:padding="@dimen/dp20"
+            android:padding="@dimen/spacing_medium"
             android:text="@string/one" />
 
         <View
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:padding="@dimen/dp20"
+            android:padding="@dimen/spacing_medium"
             android:text="@string/two" />
 
         <View
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:padding="@dimen/dp20"
+            android:padding="@dimen/spacing_medium"
             android:text="@string/three" />
 
         <View
@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:padding="@dimen/dp20"
+            android:padding="@dimen/spacing_medium"
             android:text="@string/four" />
 
         <View
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:padding="@dimen/dp20"
+            android:padding="@dimen/spacing_medium"
             android:text="@string/five" />
     </LinearLayout>
 </layout>

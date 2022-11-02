@@ -41,8 +41,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:contentDescription="@string/create_reservation"
         android:backgroundTint="@color/colorPrimary"
-        android:layout_marginEnd="@dimen/dp10"
-        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_small"
         android:src="@drawable/ic_plus"
         app:tint="@android:color/white"
         android:tint="@color/white"/>

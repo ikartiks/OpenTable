@@ -17,7 +17,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp10"
+            android:layout_margin="@dimen/spacing_small"
             android:gravity="bottom"
             android:orientation="vertical">
 
@@ -25,7 +25,7 @@
                 android:id="@+id/name_wrapper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginTop="@dimen/spacing_small"
                 style="@style/MyTextInputLayout"
                 android:hint="@string/name"
                 app:errorMessage="@{vm.nameError}">
@@ -35,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginTop="@dimen/spacing_small"
                     android:imeOptions="actionNext"
                     android:maxLines="1"
                     android:singleLine="true"
@@ -51,7 +51,7 @@
                 android:id="@+id/notes_wrapper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginTop="@dimen/spacing_small"
                 style="@style/MyTextInputLayout"
                 android:hint="@string/notes"
                 app:errorMessage="@{null}">
@@ -61,7 +61,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginTop="@dimen/spacing_small"
                     android:imeOptions="actionNext"
                     android:maxLines="1"
                     android:singleLine="true"
@@ -79,10 +79,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="@dimen/dp15"
+                android:layout_marginBottom="@dimen/spacing_medium"
                 android:text="@string/confirm"
                 android:textColor="@color/white"
-                android:padding="@dimen/dp20"
+                android:padding="@dimen/spacing_medium"
                 android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>

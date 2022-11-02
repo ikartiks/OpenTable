@@ -17,14 +17,14 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp10"
+            android:layout_margin="@dimen/spacing_small"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginTop="@dimen/spacing_small"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textStyle="bold"
                 tools:text="@string/app_name"
@@ -37,7 +37,7 @@
                 android:id="@+id/party_size_heading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginTop="@dimen/spacing_medium"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:text="@string/party_size"
                 android:textColor="@color/secondaryText"
@@ -52,7 +52,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 tools:text="4"
                 android:text="@{vm.selectedReservation.partySize}"
-                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginStart="@dimen/spacing_small"
                 app:layout_constraintTop_toTopOf="@id/party_size_heading"
                 app:layout_constraintStart_toEndOf="@id/party_size_heading"
                 />
@@ -61,7 +61,7 @@
                 android:id="@+id/time_heading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginTop="@dimen/spacing_medium"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:text="@string/time"
                 android:textColor="@color/secondaryText"
@@ -76,7 +76,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 tools:text="04:15 pm"
                 android:text="@{vm.selectedReservation.friendlyTime}"
-                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginStart="@dimen/spacing_medium"
                 app:layout_constraintTop_toTopOf="@id/time_heading"
                 app:layout_constraintStart_toEndOf="@id/time_heading"
                 />
@@ -85,7 +85,7 @@
                 android:id="@+id/visit_notes_heading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginTop="@dimen/spacing_medium"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:text="@string/visit_notes"
                 android:textColor="@color/secondaryText"

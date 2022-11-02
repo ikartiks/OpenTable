@@ -17,7 +17,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="@dimen/dp25"
-            android:layout_marginEnd="@dimen/dp25"/>
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_medium"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

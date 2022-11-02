@@ -30,7 +30,7 @@
 
     <style name="OurButtonStyle" parent="Widget.Material3.Button">
         <item name="android:background">@drawable/default_button_bg</item>
-        <item name="android:padding">@dimen/dp16</item>
+        <item name="android:padding">@dimen/spacing_medium</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
         <item name="android:textColor">@color/primaryText</item>
     </style>
